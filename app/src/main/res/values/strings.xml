@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">KisanMarket</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="product_category_arrays">
+        <item>Cereals</item>
+        <item>Vegetable</item>
+        <item>Seed</item>
+        <item>Fruit</item>
+    </string-array>
+
+    <string-array name="product_sub_category_arrays">
+        <item>Rice</item>
+        <item>Wheat</item>
+        <item>Pulces</item>
+        <item>Green Vegetable</item>
+        <item>Dry Vegetable</item>
+        <item>Seed</item>
+        <item>Green Fruit</item>
+        <item>Dry Fruit</item>
+    </string-array>
+
+</resources>

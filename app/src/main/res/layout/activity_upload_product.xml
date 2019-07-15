@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".UploadProductActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBar_uploadProduct"
+        app:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolBar_uploadProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:logo="@drawable/cart"
+            app:title="Upload Product"
+            app:titleTextColor="@android:color/holo_orange_dark">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewProductUpload"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar_uploadProduct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewProductImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_menu_camera"
+                    android:contentDescription="product_image"
+                    android:scaleType="centerCrop" />
+
+                <Button
+                    android:id="@+id/buttonChoose"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                    android:background="@color/colorAccent"
+                    android:text="Choose Image"
+                    android:textColor="@color/colorBackground" />
+
+                <TableRow
+                    android:paddingVertical="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:id="@+id/textViewProductName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name: "
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextProductName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:textColor="@color/colorBackground"
+                        android:inputType="textPersonName"/>
+                </TableRow>
+
+                <TableRow
+                    android:paddingVertical="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:id="@+id/textViewProductCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category: "
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerProductCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/product_category_arrays" />
+
+                </TableRow>
+
+                <TableRow
+                    android:paddingVertical="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:id="@+id/textViewProductSubCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Category: "
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerProductSubCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/product_sub_category_arrays"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:paddingVertical="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:id="@+id/textViewProductQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quantity: "
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextProductQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textColor="@color/colorBackground"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:id="@+id/textViewProductQuantityUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kg"
+                        android:textColor="@color/colorBackground"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:paddingVertical="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:id="@+id/textViewProductPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price: "
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextProductPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textColor="@color/colorBackground"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:id="@+id/textViewProductPriceUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs/Kg"
+                        android:textColor="@color/colorBackground"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                    android:paddingVertical="@dimen/activity_vertical_margin">
+                    <TextView
+                        android:id="@+id/textViewProductOwnerLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Owner: "
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textViewProductOwner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="uday28kumar"
+                        android:textColor="@color/colorBackground"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <Button
+                    android:id="@+id/buttonUploadProduct"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="50dp"
+                    android:background="@color/colorAccent"
+                    android:text="Upload Product"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBackground" />
+
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

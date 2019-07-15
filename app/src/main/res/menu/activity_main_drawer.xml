@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/home" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+    </group>
+
+    <group android:id="@+id/goods" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_cereals"
+            android:icon="@drawable/cereal"
+            android:title="Cereal &amp; Pulces" />
+        <item
+            android:id="@+id/nav_vegetables"
+            android:icon="@drawable/vegetable"
+            android:title="Vegetable" />
+        <item
+            android:id="@+id/nav_seeds"
+            android:icon="@drawable/seed"
+            android:title="Seed" />
+        <item
+            android:id="@+id/nav_fruits"
+            android:icon="@drawable/fruit"
+            android:title="Fruit" />
+    </group>
+
+    <group android:id="@+id/account" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/my_order"
+            android:title="My Orders" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/account"
+            android:title="My Account" />
+    </group>
+
+</menu>
